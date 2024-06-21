@@ -105,7 +105,7 @@ function createMenu(products, loadProductById) {
       const content = document.getElementById('content');
       content.innerHTML = `
         <h1>About Us</h1>
-        <p>My name is Tunç. I have been taking education in the field of cinema and game music for many years and have participated in various projects.</p>
+        <p>My name is Tunc Alicioglu. I have been taking education in the field of cinema and game music for many years and have participated in various projects.</p>
         <p>My main goal is to share my accumulated knowledge with you.</p>
         <p>Contact: <a href="mailto:makemuzikcontact@gmail.com">makemuzikcontact@gmail.com</a></p>
       `;
