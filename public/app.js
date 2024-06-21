@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Tüm Product verilerini çekmek için API isteği
-  fetch('http://localhost:1337/api/products?populate=*&sort=Date:desc')
+  fetch('https://www.makemuzik.com/api/products?populate=*&sort=Date:desc')
     .then(response => response.json())
     .then(data => {
       console.log('Product data:', data);

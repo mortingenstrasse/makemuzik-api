@@ -4,7 +4,7 @@
   "description": "Your project description",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "strapi start",
     "strapi": "strapi start",
     "build": "strapi build"
   },
