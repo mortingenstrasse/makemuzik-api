@@ -1,4 +1,4 @@
-module.exports = ({ env }) => [
+module.exports = [
   'strapi::errors',
   {
     name: 'strapi::security',
@@ -22,29 +22,4 @@ module.exports = ({ env }) => [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-  {
-    name: 'strapi::router',
-    config: {
-      routes: [
-        {
-          method: 'GET',
-          path: '/',
-          handler: async (ctx) => {
-            const fs = require('fs').promises;
-            const path = require('path');
-            const indexPath = path.join(__dirname, '..', 'public', 'index.html');
-            ctx.type = 'html';
-            ctx.body = await fs.readFile(indexPath, 'utf8');
-          },
-        },
-      ],
-    },
-  },
-  {
-    name: 'strapi::public',
-    config: {
-      path: 'public',
-      maxAge: 60000,
-    },
-  },
 ];
