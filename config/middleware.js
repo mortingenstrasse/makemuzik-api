@@ -40,4 +40,11 @@ module.exports = ({ env }) => [
       ],
     },
   },
+  {
+    name: 'strapi::public',
+    config: {
+      path: 'public',
+      maxAge: 60000,
+    },
+  },
 ];
