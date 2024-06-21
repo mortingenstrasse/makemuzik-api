@@ -14,7 +14,13 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['https://www.makemuzik.com', 'https://makemuzik-api-85b50e847530.herokuapp.com'],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    },
+  },
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
