@@ -30,8 +30,11 @@ module.exports = ({ env }) => [
           method: 'GET',
           path: '/',
           handler: async (ctx) => {
+            const fs = require('fs').promises;
+            const path = require('path');
+            const indexPath = path.join(__dirname, '..', 'public', 'index.html');
             ctx.type = 'html';
-            ctx.body = await strapi.fs.readFile(strapi.dirs.public + '/index.html');
+            ctx.body = await fs.readFile(indexPath, 'utf8');
           },
         },
       ],
