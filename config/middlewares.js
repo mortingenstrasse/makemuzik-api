@@ -17,7 +17,7 @@ module.exports = ({ env }) => [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://www.makemuzik.com', 'https://makemuzik-api-85b50e847530.herokuapp.com'],
+      origin: ['https://www.makemuzik.com', 'https://api.makemuzik.com'],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     },
   },
