@@ -1,4 +1,4 @@
-module.exports = ({ env }) => [
+module.exports = [
   'strapi::errors',
   {
     name: 'strapi::security',
@@ -7,20 +7,11 @@ module.exports = ({ env }) => [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:', 'http:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
-          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
-          upgradeInsecureRequests: null,
         },
       },
     },
   },
-  {
-    name: 'strapi::cors',
-    config: {
-      origin: ['https://www.makemuzik.com', 'https://api.makemuzik.com'],
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    },
-  },
+  'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
