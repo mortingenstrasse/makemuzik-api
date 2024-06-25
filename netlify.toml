@@ -1,0 +1,8 @@
+[build]
+  functions = "functions"
+
+[[plugins]]
+  package = "netlify-plugin-sitemap"
+
+[functions]
+  node_bundler = "esbuild"
